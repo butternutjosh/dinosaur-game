@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dinosaur game</title>
+    </head>
+    <body>
+        <image src="running_dino1.png" id="dino"></image>
+        <button onclick="change_image()">change</button>
+        <script>
+            
+            function change_image(){
+                
+                
+                if(document.getElementById("dino").src==="running_dino1.png"){
+                    document.getElementById("dino").scr="running_dino2.png"
+                    
+                    
+                }
+                if(document.getElementById("dino").src==="running_dino2.png"){
+                    document.getElementById("dino").src="running_dino1.png"
+                }
+                
+                    
+                
+            }
+        </script>
+    </body>
+</html>
