@@ -1,58 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dinosaur game</title>
+        <title>play games?</title>
     </head>
-    <body onkeydown="jump_func()"   style="background-color: orange;">
-        <image src="Untitled.png" width="200" hight="200"></image>
-        <image style="transform: translate(350px,20px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
+    <body style="background-color: burlywood;">
+        <div class="intro_page">
+            <h1>welcome</h1>
+            <h3>to play a dinosaur game <a href="dinosaur-game.html">click here</a></h3>
+        </div>
         
-        <script>
-           
-            
-            //function to calculate translation
-            function movement(x){
-                return Math.abs( -((x)^2)+10   )   
-                }
-                //makes dino jump
-                function jump_func() {
-                    
-                for (let i = 0; i < 100; i++) {
-                    let x = movement(i);
-                    setTimeout(() => {
-                        document.getElementById("dino").style.transform = `translate(350px, ${x}px)`;
-                    }, i*10); 
-                }
-            }
-                 
-            //make dino run
-            setInterval(change_image,200)
-            function change_image(){
-                console.log(document.getElementById("dino").src)
-                
-                
-                
-
-
-                if(document.getElementById("dino").src==="https://butternutjosh.github.io/dinosaur-game/running_dino1.png" ){
-                    document.getElementById("dino").src="https://butternutjosh.github.io/dinosaur-game/running_dino2.png"
-                    console.log("switched to two")
-                    
-                    
-                    
-                }
-                else if(document.getElementById("dino").src==="https://butternutjosh.github.io/dinosaur-game/running_dino2.png"){
-                    document.getElementById("dino").src="https://butternutjosh.github.io/dinosaur-game/running_dino1.png"
-                    console.log("switched to 1")
-                    
-
-                }
-                else{console.log("not switched")}
-                
-                
-                    
-                
-            }
-        </script>
     </body>
 </html>
