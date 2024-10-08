@@ -28,21 +28,26 @@
             //make dino run
             setInterval(change_image,200)
             function change_image(){
+                console.log(document.getElementById("dino").src)
                 
                 
                 
 
 
-                if(document.getElementById("dino").src==="running_dino1.png" ){
-                    document.getElementById("dino").src="running_dino2.png"
+                if(document.getElementById("dino").src==="https://butternutjosh.github.io/dinosaur-game/running_dino1.png" ){
+                    document.getElementById("dino").src="https://butternutjosh.github.io/dinosaur-game/running_dino2.png"
+                    console.log("switched to two")
                     
                     
                     
                 }
-                else if(document.getElementById("dino").src==="running_dino2.png"){
-                    document.getElementById("dino").src="running_dino1.png"
+                else if(document.getElementById("dino").src==="https://butternutjosh.github.io/dinosaur-game/running_dino2.png"){
+                    document.getElementById("dino").src="https://butternutjosh.github.io/dinosaur-game/running_dino1.png"
+                    console.log("switched to 1")
                     
+
                 }
+                else{console.log("not switched")}
                 
                 
                     
