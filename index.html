@@ -3,22 +3,39 @@
     <head>
         <title>Dinosaur game</title>
     </head>
-    <body>
-        <image src="running_dino1.png" id="dino"></image>
-        <button onclick="change_image()">change</button>
+    <body onkeydown="jump_func()"  style="background-color: orange;">
+        <image style="transform: translate(350px,50px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
+        
         <script>
+            function movement(x){
+                return -(x^2)+50
+            }
+            function jump_func(){
+                for(let i=0;i<100;i++){
+
+                    document.getElementById("dino").style="transform: translate(350px,0px)"
+                    
+                }
+            }
             
+            setInterval(change_image,200)
             function change_image(){
                 
                 
-                if(document.getElementById("dino").src==="running_dino1.png"){
-                    document.getElementById("dino").scr="running_dino2.png"
+                
+
+
+                if(document.getElementById("dino").src==="file:///C:/Users/parke/OneDrive/Documents/GitHub/graphics/running_dino1.png"){
+                    document.getElementById("dino").src="file:///C:/Users/parke/OneDrive/Documents/GitHub/graphics/running_dino2.png"
+                    
                     
                     
                 }
-                if(document.getElementById("dino").src==="running_dino2.png"){
-                    document.getElementById("dino").src="running_dino1.png"
+                else{
+                    document.getElementById("dino").src="file:///C:/Users/parke/OneDrive/Documents/GitHub/graphics/running_dino1.png"
+                    
                 }
+                
                 
                     
                 
