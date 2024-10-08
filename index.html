@@ -4,22 +4,23 @@
         <title>Dinosaur game</title>
     </head>
     <body onkeydown="jump_func()"   style="background-color: orange;">
-        <image style="transform: translate(350px,50px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
+        <image src="Untitled.png" width="200" hight="200"></image>
+        <image style="transform: translate(350px,10px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
         
         <script>
             //function to calculate translation
             function movement(x){
-                return Math.abs( -((x)^2)+50   )   
+                return Math.abs( -((x)^2)+10   )   
                 }
                 //makes dino jump
-            function jump_func(){
-                for(i=0;i<100;i++){
-                    x=movement(i)
-                    document.getElementById("dino").style=`transform: translate(350px,${x}px)`
-                    
-                    
+                function jump_func() {
+                for (let i = 0; i < 100; i++) {
+                    let x = movement(i);
+                    setTimeout(() => {
+                        document.getElementById("dino").style.transform = `translate(350px, ${x}px)`;
+                    }, i*10); 
                 }
-                }
+            }
                  
             //make dino run
             setInterval(change_image,200)
