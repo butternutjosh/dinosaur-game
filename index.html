@@ -3,7 +3,7 @@
     <head>
         <title>Dinosaur game</title>
     </head>
-    <body onkeydown="jump_func()" onkeyup="stop_jump()"  style="background-color: orange;">
+    <body onkeydown="jump_func()"   style="background-color: orange;">
         <image style="transform: translate(350px,50px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
         
         <script>
@@ -17,11 +17,10 @@
                     x=movement(i)
                     document.getElementById("dino").style=`transform: translate(350px,${x}px)`
                     
+                    
                 }
                 }
-                 function stop_jump(){
-                    clearInterval(move_interval)
-                 }
+                 
             //make dino run
             setInterval(change_image,200)
             function change_image(){
