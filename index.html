@@ -5,15 +5,18 @@
     </head>
     <body onkeydown="jump_func()"   style="background-color: orange;">
         <image src="Untitled.png" width="200" hight="200"></image>
-        <image style="transform: translate(350px,10px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
+        <image style="transform: translate(350px,20px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
         
         <script>
+           
+            
             //function to calculate translation
             function movement(x){
                 return Math.abs( -((x)^2)+10   )   
                 }
                 //makes dino jump
                 function jump_func() {
+                    
                 for (let i = 0; i < 100; i++) {
                     let x = movement(i);
                     setTimeout(() => {
@@ -30,14 +33,14 @@
                 
 
 
-                if(document.getElementById("dino").src==="file:///C:/Users/parke/OneDrive/Documents/GitHub/graphics/running_dino1.png"){
-                    document.getElementById("dino").src="file:///C:/Users/parke/OneDrive/Documents/GitHub/graphics/running_dino2.png"
+                if(document.getElementById("dino").src==="running_dino1.png" ){
+                    document.getElementById("dino").src="running_dino2.png"
                     
                     
                     
                 }
                 else{
-                    document.getElementById("dino").src="file:///C:/Users/parke/OneDrive/Documents/GitHub/graphics/running_dino1.png"
+                    document.getElementById("dino").src="running_dino1.png"
                     
                 }
                 
