@@ -3,15 +3,13 @@
     <head>
         <title>Dinosaur game</title>
     </head>
-    <body onkeydown="jump_func()"  onkeyup="stop_jump()" style="background-color: orange;">
+    <body onkeydown="jump_func()"   style="background-color: orange;">
         <image src="Untitled.png" width="200" hight="200"></image>
         <image style="transform: translate(350px,20px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
         
         <script>
            var in_air=0
-            function stop_jump(){
-                in_air=0
-            }
+            
             //function to calculate translation
             function movement(x){
                 return Math.abs( -((x)^2)+10   )   
@@ -25,6 +23,7 @@
                         document.getElementById("dino").style.transform = `translate(350px, ${x}px)`;
                     }, i*10); 
                 }
+                in_air=0
             }
                  
             //make dino run
