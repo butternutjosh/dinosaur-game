@@ -8,7 +8,7 @@
         <image style="transform: translate(350px,20px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
         
         <script>
-           
+           var in_air=0
             
             //function to calculate translation
             function movement(x){
@@ -16,7 +16,7 @@
                 }
                 //makes dino jump
                 function jump_func() {
-                    
+                    in_air=1
                 for (let i = 0; i < 100; i++) {
                     let x = movement(i);
                     setTimeout(() => {
@@ -30,8 +30,8 @@
             setInterval(change_image,200)
             function change_image(){
                 console.log(document.getElementById("dino").src)
-                
-                
+                console.log(in_air)
+                if(in_air==0){
                 
 
 
@@ -51,7 +51,7 @@
                     else{
                         //console.log("not switched")
                 }
-            
+            }
                 
                 
                     
