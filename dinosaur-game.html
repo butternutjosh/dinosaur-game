@@ -4,11 +4,12 @@
         <title>Dinosaur game</title>
     </head>
     <body onkeydown="jump_func()"   style="background-color: orange;">
-        <image src="Untitled.png" width="200" hight="200"></image>
+        <image src="rock-removebg-preview.png"  id="dwaine" width="50" hight="50" style ="transform: translate(1000px,90px);"></image>
         <image style="transform: translate(350px,20px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
         
         <script>
            var in_air=0
+           setInterval(dwaine_move(),4000)
             
             //function to calculate translation
             function movement(x){
@@ -58,8 +59,20 @@
                 
                 
                     
-                
+            
             }
+            function move_dwaine(x){
+                return 1000-5*x
+            }
+            function dwaine_move(){
+                document.getElementById("dwaine").style.transform=`translate(1000,90)`
+                for(let j=0;j<135;j++){
+                    let y = move_dwaine(j)
+                    setTimeout(()=>{
+                        document.getElementById("dwaine").style.transform=`translate(${y}px,90px)`;
+                    },j*20)
+            }}
+
         </script>
     </body>
 </html>
