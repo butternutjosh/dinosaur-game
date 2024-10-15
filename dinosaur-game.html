@@ -17,16 +17,17 @@
                 }
                 //makes dino jump
                 function jump_func() {
+                    if(in_air==0){
                     in_air=1
                 for (let i = 0; i < 400; i++) {
                     let x = movement(i);
                     setTimeout(() => {
                         document.getElementById("dino").style.transform = `translate(350px, ${x}px)`;
-                    }, i*2); 
+                    }, i*2); }
                 }
                 setTimeout(()=>{
                         in_air=0
-                },650)
+                },800)
                 
             }
                  
