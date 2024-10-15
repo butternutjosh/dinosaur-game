@@ -5,7 +5,7 @@
     </head>
     <body onkeydown="jump_func()"   style="background-color: orange;">
         <image src="rock-removebg-preview.png"  id="dwaine" width="50" hight="50" style ="transform: translate(1000px,90px);"></image>
-        <image style="transform: translate(350px,20px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
+        <image style="transform: translate(350px,100px)" width= "200" hight="200" src="running_dino1.png" id="dino"></image>
         
         <script>
            var in_air=0
@@ -13,20 +13,20 @@
             
             //function to calculate translation
             function movement(x){
-                return Math.abs( -(x^2)+10   )   
+                return Math.abs( -(x^2)/2+100  )   
                 }
                 //makes dino jump
                 function jump_func() {
                     in_air=1
-                for (let i = 0; i < 100; i++) {
+                for (let i = 0; i < 400; i++) {
                     let x = movement(i);
                     setTimeout(() => {
                         document.getElementById("dino").style.transform = `translate(350px, ${x}px)`;
-                    }, i*10); 
+                    }, i*2); 
                 }
                 setTimeout(()=>{
                         in_air=0
-                },1500)
+                },1050)
                 
             }
                  
@@ -68,7 +68,7 @@
             for(let k =0;k<100;k++){
                 setTimeout(() => {
                     animate_dwaine()
-                },k*2300);
+                },k*1300);
             }
                 
             function animate_dwaine(){    
@@ -76,7 +76,7 @@
                     let y = move_dwaine(j)
                     setTimeout(()=>{
                         document.getElementById("dwaine").style.transform=`translate(${y}px,90px)`;
-                    },j*15)
+                    },j*8)
                         
                     }}
                     
