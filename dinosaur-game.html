@@ -26,7 +26,7 @@
                 }
                 setTimeout(()=>{
                         in_air=0
-                },1050)
+                },650)
                 
             }
                  
@@ -68,15 +68,15 @@
             for(let k =0;k<100;k++){
                 setTimeout(() => {
                     animate_dwaine()
-                },k*1300);
+                },k*1700);
             }
                 
             function animate_dwaine(){    
                 for(let j=0;j<135;j++){
                     let y = move_dwaine(j)
                     setTimeout(()=>{
-                        document.getElementById("dwaine").style.transform=`translate(${y}px,90px)`;
-                    },j*8)
+                         document.getElementById("dwaine").style.transform=`translate(${y}px,100px)`;
+                    },j*12)
                         
                     }}
                     
