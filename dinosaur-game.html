@@ -9,7 +9,7 @@
         
         <script>
            var in_air=0
-           setInterval(dwaine_move(),4000)
+           
             
             //function to calculate translation
             function movement(x){
@@ -64,14 +64,17 @@
             function move_dwaine(x){
                 return 1000-5*x
             }
-            function dwaine_move(){
+            
+            for(let k =0;k<100;k++){
+                
                 document.getElementById("dwaine").style.transform=`translate(1000,90)`
                 for(let j=0;j<135;j++){
                     let y = move_dwaine(j)
                     setTimeout(()=>{
                         document.getElementById("dwaine").style.transform=`translate(${y}px,90px)`;
                     },j*20)
-            }}
+            } }
+            
 
         </script>
     </body>
