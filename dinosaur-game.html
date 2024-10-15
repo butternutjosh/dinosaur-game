@@ -65,14 +65,17 @@
             function move_dwaine(x){
                 return 1000-5*x
             }
-            
+            var dwaine_interval=Math.floor((Math.random()*100)-30)
             for(let k =0;k<100;k++){
+                
                 setTimeout(() => {
                     animate_dwaine()
-                },k*1700);
+                    
+                },k*135*12);
             }
                 
             function animate_dwaine(){    
+                
                 for(let j=0;j<135;j++){
                     let y = move_dwaine(j)
                     setTimeout(()=>{
